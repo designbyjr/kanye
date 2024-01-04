@@ -32,7 +32,13 @@ Follow these steps to set up and run the project on your local environment:
    cp .env.example .env
    ```
 
-4. Set your API token in the `.env` file:
+4. Generate Key in `.env` file:
+
+   ```bash
+   php artisan key:generate
+   ```
+
+5. Set your API token in the `.env` file:
 
    ```
    API_TOKEN=your-api-token
@@ -40,13 +46,13 @@ Follow these steps to set up and run the project on your local environment:
 
    Replace `your-api-token` with your desired API token.
 
-5. Start the Laravel Sail environment using Docker:
+6. Start the Laravel Sail environment using Docker:
 
    ```bash
    ./vendor/bin/sail up -d
    ```
 
-6. Access the application at [http://localhost](http://localhost).
+7. Access the application at [http://localhost](http://localhost).
 
 ## API Endpoints
 

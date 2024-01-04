@@ -11,3 +11,6 @@ Route::middleware([ApiAuthToken::class])->group(function () {
     Route::get('/quotes/random', [KanyeQuotesController::class, 'getRandomQuotes']);
     Route::post('/quotes/refresh', [KanyeQuotesController::class, 'refreshQuotes']);
 });
+Route::fallback(function (){
+    abort(404, 'API resource not found');
+});
