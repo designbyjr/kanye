@@ -11,7 +11,7 @@ class KanyeQuotesControllerTest extends TestCase
     public function testGetRandomQuotes()
     {
         $response = $this->get('api/quotes/random?count=5',
-                ["Authorization"=>"Bearer d73ad1a66b9121b51d0b9c6113322c231c9338f333ddb70fdbc5637a328478fe"]
+                ["Authorization"=>"Bearer ".env("API_TOKEN")]
                     );
 
         $response->assertStatus(200)
@@ -32,7 +32,7 @@ class KanyeQuotesControllerTest extends TestCase
     public function testRefreshQuotes()
     {
         $response = $this->post('api/quotes/refresh',[],
-            ["Authorization"=>"Bearer d73ad1a66b9121b51d0b9c6113322c231c9338f333ddb70fdbc5637a328478fe"]
+            ["Authorization"=>"Bearer ".env("API_TOKEN")]
         );
 
         $response->assertStatus(200)
@@ -46,7 +46,7 @@ class KanyeQuotesControllerTest extends TestCase
                         'updated_at',
                     ],
                 ],
-                'status' => "Quotes refreshed"
+                'status'
             ]);
     }
 }
