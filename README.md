@@ -1,4 +1,4 @@
-Certainly! Here's a README file that includes instructions on how to set up the Laravel project using Laravel Sail and Docker, as well as use cases for each API endpoint:
+Here's a README file that includes instructions on how to set up the Laravel project using Laravel Sail and Docker, as well as use cases for each API endpoint:
 
 # Kanye West Quotes API
 
